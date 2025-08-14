@@ -19,5 +19,7 @@ export class ArticleCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  protected navigate(url: string) {
+    this.router.navigate(['article/' + url])
+  }
 }

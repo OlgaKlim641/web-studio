@@ -4,12 +4,14 @@ import {ArticleCardComponent} from "./conponents/article-card/article-card.compo
 import {RouterModule} from "@angular/router";
 import {PopupComponent} from "./conponents/popup/popup.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import {TruncateTextPipe} from "./unit/truncate-text.pipe";
+
 
 
 
 
 @NgModule({
-  declarations: [ArticleCardComponent, PopupComponent],
+  declarations: [ArticleCardComponent, PopupComponent, TruncateTextPipe],
   imports: [
     CommonModule,
     RouterModule,

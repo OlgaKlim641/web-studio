@@ -1,0 +1,58 @@
+@import "../../../../assets/styles/_variables";
+
+.footer {
+  padding: 40px 0 54px;
+  background-color: #B9D5FD;;
+
+  .container {
+
+    .footer-menu {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+
+      .logo {
+        margin-right: 30px;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+
+        li {
+          margin-right: 20px;
+          list-style: none;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            font-size: 16px;
+            color: $black-text-color;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+              color: $blue-text-color;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-info {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+
+
+
+    }
+  }
+}
+
+

@@ -1,0 +1,109 @@
+
+
+html body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+
+}
+
+.input {
+  border: 2px solid $blue-text-color;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 17px 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: $black-text-color;
+}
+
+.button {
+  text-align: center;
+  background-color: $blue-text-color;
+  padding: 15px 20px;
+  color: #FFFFFF;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 0;
+  cursor: pointer;
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+
+  &.phone {
+      width: 153px;
+      font-size: 12px;
+      padding: 10px 20px;
+  }
+
+  &.stock {
+    width: 163px;
+    font-size: 16px;
+  }
+}
+
+.mat-menu-item {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  a {
+    text-decoration: none;
+    color: $black-text-color;
+  }
+}
+
+.contact-block {
+  margin-bottom: 6px;
+  margin-right: 60px;
+  font-size: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .contact-head {
+    font-weight: 500;
+    color: $blue-text-color;
+    margin-bottom: 10px;
+  }
+
+  .contact-text {
+    color: $black-text-color;
+
+    a {
+      text-decoration: none;
+      color: $black-text-color;
+      cursor: pointer;
+    }
+  }
+
+  &.contact-address {
+    width: 253px;
+  }
+
+  &.contact-phone {
+    .contact-text {
+      padding-bottom: 10px;
+    }
+  }
+
+  &.contact-social {
+    .contact-text {
+      display: flex;
+      align-items: center;
+      a {
+        margin-right: 12px;
+      }
+    }
+  }
+}

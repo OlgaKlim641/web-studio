@@ -1,0 +1,38 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.popup {
+  padding: 94px 100px 86px;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  .popup-close {
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    right: 30px;
+  }
+
+  .popup-title {
+    @include title-lora-38;
+    margin-bottom: 20px;
+  }
+
+  .popup-text {
+    font-weight: 500;
+    font-size: 14px;
+    color: #1E1A2B;
+  }
+
+  .order-inputs {
+    margin-bottom: 20px;
+  }
+
+  .button.thankYou {
+    width: 73px;
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+}

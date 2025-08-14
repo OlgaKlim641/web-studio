@@ -1,0 +1,417 @@
+@import "../../../assets/styles/_variables";
+@import "../../../assets/styles/_mixins";
+
+.main {
+  .main-carousel {
+    .stock-carousel {
+      position: relative;
+      margin-bottom: 120px;
+
+      .stock-item {
+        width: 100%;
+        height: 500px;
+        position: relative;
+
+        .stock-circle {
+          width: 700px;
+          height: 500px;
+          z-index: -3;
+          position: absolute;
+        }
+
+        .stock-item-info {
+          margin-left: 80px;
+
+          span {
+            color: $blue-text-color;
+          }
+
+          .stock-item-type {
+            padding-top: 100px;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: $blue-text-color;
+          }
+
+          .stock-item-title {
+            max-width: 610px;
+            font-family: Lora, sans-serif;
+            font-weight: 400;
+            font-size: 50px;
+            line-height: 130%;
+            color: #FFFFFF;
+            padding-bottom: 20px;
+          }
+
+          .stock-item-text {
+            max-width: 456px;
+            font-size: 24px;
+            line-height: 130%;
+            color: #FFFFFF;
+            padding-bottom: 20px;
+          }
+
+          .button .stock {
+            margin-top: 30px;
+          }
+        }
+
+        .stock-image {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 750px;
+          height: 500px;
+          background-color: #000000;
+          background-size: cover;
+          background-position: center;
+          z-index: -20;
+        }
+      }
+
+      .stock-arrows {
+        display: flex;
+
+        a {
+          min-width: 15px;
+          min-height: 28px;
+          top: calc(50% - 12px);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+          z-index: 900;
+
+          &.move-backward {
+            z-index: 900;
+            left: 7px;
+          }
+
+          &.move-forward {
+            right: 7px;
+          }
+        }
+      }
+
+      .stock-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70px;
+        position: absolute;
+        bottom: 20px;
+        right: calc(50% - 24px);
+        margin-top: 0;
+        z-index: 999;
+        cursor: pointer;
+
+        .owl-nav {
+          min-width: 10px;
+          min-height: 10px;
+          border-radius: 50%;
+          margin-right: 20px;
+          box-sizing: border-box;
+          border: 1px solid #FFFFFF;
+
+          &.center {
+            background: white;
+          }
+        }
+      }
+    }
+
+  }
+
+  .services {
+    padding-bottom: 120px;
+
+    .services-title {
+      @include title-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .services-items {
+      display: flex;
+      align-items: center;
+
+      .service-item {
+        width: 290px;
+        height: 498px;
+        margin-right: 26px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .item-image {
+          background-size: cover;
+          background-position: center;
+          margin-bottom: 15px;
+          border-radius: 5px;
+          box-sizing: border-box;
+          border: 0;
+        }
+
+        .item-title {
+          font-weight: 500;
+          color: $blue-text-color;
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        .item-text {
+          height: 100px;
+          font-size: 14px;
+          line-height: 130%;
+          color: #071739;
+          margin-bottom: 15px;
+        }
+
+        .item-action {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+
+          .item-action-price {
+            font-weight: 600;
+            font-size: 20px;
+            color: $blue-text-color;
+          }
+
+          .button .item-action {
+            width: 163px;
+          }
+        }
+      }
+    }
+  }
+
+  .advantages {
+    margin-bottom: 120px;
+
+    .advantages-block {
+      display: flex;
+      align-items: start;
+
+      .advantages-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-right: 68px;
+      }
+
+      .advantages-info {
+        .advantages-info-top {
+          .advantages-info-top-title {
+            @include title-lora-38;
+            margin-bottom: 20px;
+          }
+
+          .advantages-info-top-text {
+            font-size: 14px;
+            line-height: 130%;
+            color: #1E1A2B;
+            margin-bottom: 40px;
+
+            span {
+              font-weight: 500;
+            }
+          }
+        }
+
+        .advantages-info-bottom {
+          .advantages-info-bottom-title {
+            font-family: Lora, sans-serif;
+            font-weight: 400;
+            font-size: 26px;
+            color: $blue-text-color;
+          }
+
+          .advantages-info-bottom-items {
+            display: grid;
+            grid-column-gap: 71px;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+
+            .advantage-info-bottom {
+              width: 316px;
+              margin-top: 20px;
+              display: flex;
+              align-items: center;
+
+              .advantage-text {
+                font-size: 14px;
+                line-height: 130%;
+                color: #1E1A2B;
+
+                span {
+                  font-weight: 500;
+                }
+              }
+
+              .advantage-circle {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #B9D5FD;
+                font-size: 50px;
+                font-family: "Lora", sans-serif;
+                font-weight: 500;
+                color: $blue-text-color;
+                text-align: center;
+                padding-right: 30px;
+                margin-right: 20px;
+                position: relative;
+
+                .advantage-circle-number {
+                  position: absolute;
+                  top: -20px;
+                  right: calc(50% - 12px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .articles-info {
+    margin-bottom: 80px;
+    position: relative;
+
+    .articles-info-title {
+      @include title-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .articles-info-items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+
+    .articles-info-block {
+      position: absolute;
+
+      right: 0;
+      width: 195px;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 40px;
+
+      a {
+        font-weight: 500;
+        font-size: 20px;
+        text-decoration: none;
+        cursor: pointer;
+        color: $blue-text-color;
+        margin-right: 14px;
+      }
+    }
+  }
+
+  .reviews {
+    margin-bottom: 120px;
+
+    .reviews-title {
+      @include title-lora-38;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .reviews-carousel {
+      position: relative;
+
+      .review-item {
+        width: 396px;
+        height: 267px;
+        padding: 30px;
+        border-radius: 15px;
+        border: 2px solid #709FDC;
+        box-sizing: border-box;
+
+        .review-item-head {
+          display: flex;
+          align-items: center;
+
+          .review-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-position: center;
+            margin-right: 26px;
+            background-size: cover;
+          }
+
+          .review-item-name {
+            font-family: Montserrat, sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: $blue-text-color;
+          }
+        }
+
+        .review-item-text {
+          font-size: 16px;
+          line-height: 140%;
+          color: $black-text-color;
+          margin-top: 15px;
+        }
+      }
+
+      .reviews-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 5px);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+
+          &.move-backward {
+            left: -41px;
+          }
+
+          &.move-forward {
+            right: -41px;
+          }
+        }
+      }
+    }
+  }
+
+  .contacts {
+    margin-bottom: 120px;
+
+    .contact {
+      display: flex;
+      align-items: flex-start;
+      justify-content: left;
+
+      .map {
+        width: 607px;
+        height: 438px;
+        margin-right: 20px;
+        vertical-align: bottom;
+      }
+
+      .contact-info {
+        width: 501px;
+
+        .contact-info-title {
+          @include title-lora-38;
+          margin-bottom: 20px;
+        }
+        .contact-block {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+
+

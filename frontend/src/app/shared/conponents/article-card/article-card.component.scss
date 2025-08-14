@@ -1,0 +1,60 @@
+@import "../../../../assets/styles/_variables";
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 292px;
+  height: 571px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+
+  .article-info {
+    position: relative;
+
+    .article-card-category {
+      position: absolute;
+      padding: 10px 18px;
+      background: #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 5px;
+      color: $blue-text-color;
+      font-size: 11px;
+      text-align: center;
+      top: 10px;
+      right: 8px;
+      z-index: 2;
+    }
+
+    .article-card-image {
+      width: 292px;
+      height: 292px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .article-card-title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 130%;
+      color: $blue-text-color;
+      margin-bottom: 20px;
+    }
+
+    .article-card-description {
+      font-size: 14px;
+      line-height: 130%;
+      color: $black-text-color;
+    }
+  }
+
+  .article-card-detail {
+    font-size: 16px;
+    color: $blue-text-color;
+
+    cursor: pointer;
+  }
+}

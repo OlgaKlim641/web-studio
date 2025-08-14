@@ -2,7 +2,6 @@
 @import "../../../../assets/styles/_mixins";
 
 
-
 .blog {
   .container {
     padding-top: 80px;
@@ -71,7 +70,7 @@
           position: absolute;
           top: -15px;
           right: -20px;
-          border: 1.5px solid #B9D5FD;
+          border: 2px solid #B9D5FD;
           font-size: 16px;
           color: $black-text-color;
           background: white;
@@ -86,7 +85,6 @@
             align-items: center;
             justify-content: space-between;
             background: #B9D5FD;
-          ;
             padding-left: 23px;
             padding-right: 23px;
             position: relative;
@@ -114,6 +112,11 @@
               padding-top: 5px;
               padding-bottom: 5px;
               cursor: pointer;
+              color: #BEBEBE;
+
+              &.active {
+                color: $black-text-color;
+              }
             }
           }
         }

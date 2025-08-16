@@ -1,0 +1,105 @@
+@import "../../../../assets/styles/_variables";
+@import "../../../../assets/styles/_mixins";
+
+.article {
+  .container {
+    padding-top: 80px;
+    padding-bottom: 120px;
+
+    .title-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 60px;
+      color: $blue-text-color;
+      font-size: 16px;
+      text-decoration: none;
+      cursor: pointer;
+
+      span {
+        margin-left: 8px;
+        font-weight: 500;
+        color: #B9D5FD;
+        padding-right: 22px;
+      }
+    }
+
+    .article-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .article-head-info {
+        width: 607px;
+
+        .article-title {
+          @include title-lora-38;
+          line-height: 130%;
+          margin-bottom: 40px;
+        }
+
+        .article-text {
+          font-size: 20px;
+          line-height: 130%;
+          color: $blue-text-color;
+        }
+      }
+
+      .article-head-image {
+        background-size: cover;
+        background-position: center;
+        width: 527px;
+        height: 320px;
+        margin-bottom: 60px;
+      }
+    }
+
+    .article-block {
+      display: flex;
+      justify-content: space-between;
+
+      .article-block-main {
+        width: 818px;
+        margin-right: 130px;
+        .article-block-text {
+
+        }
+
+        .article-block-social {
+          display: flex;
+          align-items: center;
+          margin-bottom: 60px;
+          margin-top: 60px;
+          span {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 130%;
+            color: $blue-text-color;
+            padding-right: 20px;
+          }
+          .social-block {
+            min-width: 87px;
+            display: flex;
+            justify-content: space-between;
+            a {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+      .article-block-extra {
+        margin-top: 60px;
+        .article-extra-title {
+          font-family: Lora, sans-serif;
+          font-weight: 400;
+          font-size: 26px;
+         color: $blue-text-color;
+          margin-bottom: 20px;
+        }
+      }
+
+    }
+  }
+}
+
+

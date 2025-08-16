@@ -1,3 +1,4 @@
+
 import {Component, Input, OnInit} from '@angular/core';
 import {ArticleType} from "../../../../types/article.type";
 import {Router} from "@angular/router";

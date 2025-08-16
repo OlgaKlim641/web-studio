@@ -107,3 +107,17 @@ html body {
     }
   }
 }
+
+h3 {
+  color: $blue-text-color;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+}
+h1 {
+  color: $blue-text-color;
+  font-family: 'Lora', sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;;
+}

@@ -1,22 +1,38 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ArticleCardComponent} from "./conponents/article-card/article-card.component";
+import {ArticleCardComponent} from "./components/article-card/article-card.component";
 import {RouterModule} from "@angular/router";
-import {PopupComponent} from "./conponents/popup/popup.component";
-import {ReactiveFormsModule} from "@angular/forms";
+import {PopupComponent} from "./components/popup/popup.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {TruncateTextPipe} from "./unit/truncate-text.pipe";
+import { LoaderComponent } from './components/loader/loader.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { CommentComponent } from './components/comment/comment.component';
 
 
 
 
 
 @NgModule({
-  declarations: [ArticleCardComponent, PopupComponent, TruncateTextPipe],
+  declarations: [
+    ArticleCardComponent,
+    PopupComponent,
+    TruncateTextPipe,
+    LoaderComponent,
+    CommentComponent],
+
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule,
+    FormsModule
   ],
-  exports: [ArticleCardComponent, PopupComponent]
+  exports: [
+    ArticleCardComponent,
+    PopupComponent,
+    TruncateTextPipe,
+    CommentComponent,
+    LoaderComponent]
 })
 export class SharedModule { }

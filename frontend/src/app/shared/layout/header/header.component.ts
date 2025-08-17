@@ -47,6 +47,7 @@ export class HeaderComponent implements OnInit {
   private getUserInfo() {
     this.authService.getUserInfo()
       .subscribe((data: UserType | DefaultResponseType) => {
+        console.log('Полученные данные пользователя:', data);
         if ((data as DefaultResponseType).error !== undefined) {
           throw new Error((data as DefaultResponseType).message);
         }

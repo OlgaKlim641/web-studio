@@ -265,8 +265,11 @@
 
                 .advantage-circle-number {
                   position: absolute;
-                  top: -20px;
-                  right: calc(50% - 12px);
+                  top: -19px;
+                  right: 6px;
+                  &:first-child {
+                    right: 9px;
+                  }
                 }
               }
             }

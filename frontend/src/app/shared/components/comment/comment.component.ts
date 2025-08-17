@@ -15,11 +15,11 @@ export class CommentComponent implements OnInit {
 
   @Input() article!: ArticleType;
 
-  protected isLoggedIn = false;
-  protected allCountComments: number = 0;
-  protected comments: CommentType[] = [];
-  protected minCountComments: number = 0;
-  protected newCommentText: string = '';
+  public isLoggedIn = false;
+  public allCountComments: number = 0;
+  public comments: CommentType[] = [];
+  public minCountComments: number = 0;
+  public newCommentText: string = '';
   private commentUserActions: CommentActionResponseType[] = [];
   private stepCountComments: number = 10;
   private isFirstRequest: boolean = true;

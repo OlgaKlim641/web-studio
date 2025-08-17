@@ -5,11 +5,11 @@
 <div class="comment">
   <div class="comment-title">Комментарии к статье</div>
 
-  <div class="comment-no-comment" *ngIf="isLoggedIn || (comments && comments.length === 0)">
+  <div class="comment-no-comment" *ngIf="isLoggedIn && (!comments || comments.length === 0)">
     Будьте первым, кто оставит свой комментарий к статье!
   </div>
 
-  <div class="comment-make">
+  <div class="comment-make" *ngIf="isLoggedIn">
     <textarea name="newComment" id="new-comment"
               placeholder="Напишите Ваш комментарий к статье..."
               class="comment-new-comment-text"
@@ -27,7 +27,7 @@
   <div class="comment-block" *ngFor="let comment of comments">
     <div class="comment-info-block">
       <div class="comment-image">
-        <img src="assets/images/page/mask.png" alt="mask">
+        <img src="assets/images/page/user.png" alt="user">
       </div>
       <div class="comment-info" >
         <div class="comment-user-name">{{ comment.user.name }}</div>
@@ -80,7 +80,7 @@
     </div>
   </div>
 
-  <div class="comment-more" (click)="addMoreComments()" *ngIf="(allCountComments > minCountComments) && (allCountComments > 3)">
+  <div class="comment-more" (click)="addMoreComments()" *ngIf="allCountComments > 3">
     <span>Загрузить ещё комментарии</span>
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

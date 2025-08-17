@@ -20,6 +20,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {ReactiveFormsModule} from "@angular/forms";
 import {AuthInterceptor} from "./core/auth/auth.interceptor";
+import {UserModule} from "./views/user/user.module";
 
 
 
@@ -37,14 +38,13 @@ import {AuthInterceptor} from "./core/auth/auth.interceptor";
     MatSnackBarModule,
     MatMenuModule,
     HttpClientModule,
+    UserModule,
     SharedModule,
     CarouselModule,
     RouterModule,
     MatDialogModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule,
-    MatButtonModule,
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule

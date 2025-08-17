@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 import {AuthService} from "../../../core/auth/auth.service";
 import {Router} from "@angular/router";
@@ -25,10 +25,12 @@ export class SignupComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private authService: AuthService,
               private router: Router,
-              private _snackBar: MatSnackBar) { }
+              private _snackBar: MatSnackBar) {
+  }
 
   ngOnInit(): void {
   }
+
   signup() {
     if (this.signupForm.valid
       && this.signupForm.value.name
@@ -68,6 +70,6 @@ export class SignupComponent implements OnInit {
           }
         })
     }
-
   }
+
 }

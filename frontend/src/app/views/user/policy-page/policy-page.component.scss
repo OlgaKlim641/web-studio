@@ -1,0 +1,77 @@
+
+
+@import "../../../../assets/styles/_variables";
+@import "../../../../assets/styles/_mixins";
+
+.container {
+  padding-bottom: 110px;
+  padding-top: 100px;
+  font-size: 16px;
+  color: $black-text-color;
+
+  h1 {
+    @include title-lora-38;
+    font-size: 30px;
+  }
+
+  h2 {
+    font-family: 'Lora', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    color: $blue-text-color;;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-family: 'Lora', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: $blue-text-color;;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  li {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .user-agreement-action {
+    margin-top: 60px;
+    margin-bottom: 50px;
+
+    .button {
+      width: 163px;
+      margin-right: 220px;
+
+    }
+
+    .link-agreement {
+      text-decoration: underline;
+      color: $blue-text-color;
+      cursor: pointer;
+    }
+
+  }
+
+  .footer {
+    .right {
+      color: $blue-text-color;
+      margin-top: 15px;
+      font-size: 12px;
+    }
+  }
+}

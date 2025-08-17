@@ -14,25 +14,44 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 export class HeaderComponent implements OnInit {
   isLogged: boolean = false;
   userInfo: UserType | null = null;
+  private timeoutId: any;
 
   constructor(private router: Router,
               private authService: AuthService,
               private _snackBar: MatSnackBar) {
-
+    this.isLogged = this.authService.getIsLoggedIn();
   }
 
   ngOnInit(): void {
-    this.isLogged = this.authService.getIsLoggedIn();
     this.authService.isLogged$.subscribe(isLoggedIn => {
       this.isLogged = isLoggedIn;
-      this.getUserInfo()
+      this.getUserInfo();
     });
 
     if (this.isLogged) {
       this.getUserInfo()
     }
+  }
 
+  protected navigateLogin(): void {
+    if (!this.isLogged) {
+      this.router.navigate(['/login']);
+    } else {
+      clearTimeout(this.timeoutId);
+      this.timeoutId = setTimeout(() => {
 
+      }, 3000);
+    }
+  }
+
+  private getUserInfo() {
+    this.authService.getUserInfo()
+      .subscribe((data: UserType | DefaultResponseType) => {
+        if ((data as DefaultResponseType).error !== undefined) {
+          throw new Error((data as DefaultResponseType).message);
+        }
+        this.userInfo = data as UserType;
+      });
   }
 
   logout(): void {
@@ -55,19 +74,4 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  private getUserInfo() {
-    this.authService.getUserInfo()
-      .subscribe((data: UserType | DefaultResponseType) => {
-        if ((data as DefaultResponseType).error !== undefined) {
-          throw new Error((data as DefaultResponseType).message);
-        }
-        this.userInfo = data as UserType;
-      });
-  }
-
-  navigateLogin() {
-    if (!this.isLogged) {
-      this.router.navigate(['/login']);
-    }
-  }
 }

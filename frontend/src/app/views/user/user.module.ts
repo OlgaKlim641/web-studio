@@ -5,12 +5,14 @@ import { UserRoutingModule } from './user-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {PolicyPageComponent} from "./policy-page/policy-page.component";
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    PolicyPageComponent,
   ],
   imports: [
     CommonModule,

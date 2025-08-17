@@ -1,13 +1,12 @@
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
-import {Observable, throwError} from "rxjs";
 import {Injectable} from "@angular/core";
 import {AuthService} from "./auth.service";
 import {Router} from "@angular/router";
 import {LoaderService} from "../../shared/services/loader.service";
-import {catchError, finalize, switchMap} from "rxjs/operators";
 import {DefaultResponseType} from "../../../types/default-response.type";
 import {LoginResponseType} from "../../../types/login-response.type";
-
+import {Observable, throwError} from "rxjs";
+import {catchError, finalize, switchMap} from "rxjs/operators";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {

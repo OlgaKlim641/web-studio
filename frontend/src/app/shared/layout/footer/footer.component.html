@@ -42,7 +42,7 @@
         <div class="contact-text">
           <a href="tel:+74993431334">+7 (499) 343-13-34</a>
         </div>
-        <div class="button phone"  (click)="activePopup()">
+        <div class="button phone" (click)="openConsultationPopup()">
           Перезвоните мне
         </div>
       </div>
@@ -88,3 +88,58 @@
     </div>
   </div>
 </div>
+
+
+<div class="popup consultation" *ngIf="showConsultation">
+  <div class="popup-container">
+    <div class="popup-close" (click)="closePopup()">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="1.93562" y1="2.64999" x2="13.9564" y2="14.6708" stroke="#BEBEBE" stroke-linecap="round"/>
+        <line x1="13.9236" y1="2.62978" x2="1.90277" y2="14.6506" stroke="#BEBEBE" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="popup-title consultation">Закажите бесплатную
+      консультацию!
+    </div>
+    <form class="inputs" [formGroup]="orderFormConsultation">
+      <div class="input-popup">
+        <input type="text" class="input" formControlName="name"
+               [ngStyle]="{'border-color': orderFormConsultation.get('name')?.invalid
+                 && (orderFormConsultation.get('name')?.dirty || orderFormConsultation.get('name')?.touched) ? 'red' : ''}"
+               placeholder="Ваше имя">
+        <div class="error-message" *ngIf="orderFormConsultation.get('name')?.touched && orderFormConsultation.get('name')?.invalid">
+          <span *ngIf="orderFormConsultation.get('name')?.errors?.['required']">Поле обязательное</span>
+        </div>
+      </div>
+      <div class="input-popup">
+        <input type="text" class="input" formControlName="phone" mask=" (000) 000-00-00" prefix="+7"
+               [ngStyle]="{'border-color': orderFormConsultation.get('phone')?.invalid
+                 && (orderFormConsultation.get('phone')?.dirty || orderFormConsultation.get('phone')?.touched) ? 'red' : ''}"
+               placeholder="Ваш номер телефона">
+        <div class="error-message" *ngIf="orderFormConsultation.get('phone')?.touched && orderFormConsultation.get('phone')?.invalid">
+          <span *ngIf="orderFormConsultation.get('phone')?.errors?.['required']">Поле обязательное</span>
+          <span *ngIf="orderFormConsultation.get('phone')?.errors?.['pattern']">Введите полный номер</span>
+        </div>
+      </div>
+      <button class="button" [disabled]="orderFormConsultation.invalid" (click)="serviceOrder()">Оставить заявку
+      </button>
+    </form>
+  </div>
+</div>
+
+
+<div class="popup thankYou" *ngIf="showThankYou">
+  <div class="popup-container">
+    <div class="popup-close" (click)="closePopup()">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="1.93562" y1="2.64999" x2="13.9564" y2="14.6708" stroke="#BEBEBE" stroke-linecap="round"/>
+        <line x1="13.9236" y1="2.62978" x2="1.90277" y2="14.6506" stroke="#BEBEBE" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="popup-title thankYou">Спасибо за вашу заявку!</div>
+    <div class="popup-text thankYou">Мы свяжемся с вами при первой же возможности.</div>
+    <div class="button thankYou" (click)="closePopup()">Окей</div>
+  </div>
+</div>
+
